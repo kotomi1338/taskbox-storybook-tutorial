@@ -14,13 +14,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "build-css": "lessc src/style/index.less src/index.css",
+    "watch-css": "npm run build-css && grunt",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
-    "chromatic": "npx chromatic --project-token=3dbd4e04e328"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "eslintConfig": {
     "extends": [
@@ -62,7 +63,12 @@
     "@storybook/preset-create-react-app": "^4.0.1",
     "@storybook/react": "^6.4.19",
     "@storybook/testing-library": "^0.0.9",
-    "chromatic": "^6.4.3",
+    "@storybook/testing-react": "^1.2.2",
+    "chromatic": "^6.2.0",
+    "grunt": "^1.4.1",
+    "grunt-contrib-less": "^3.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "less": "^4.1.2",
     "react-test-renderer": "^17.0.2",
     "webpack": "^5.68.0"
   }
