@@ -1,9 +1,6 @@
-name: Chromatic
+name: "Chromatic Deployment"
 
-on:
-  push:
-    branches:
-      - hoge
+on: push
 
 jobs:
   build:
